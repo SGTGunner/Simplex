@@ -41,7 +41,7 @@
 </ul>
 #Contributors 
 <ul>
-<li>Rama Patel &middot; Main programmer for simplex</li>
+<li>Rexs123 &middot; Main programmer for simplex</li>
 <br>
 <li>Aireesan &middot; Minor contributor</li>
 <br>

@@ -14,8 +14,8 @@ include('var.php');
 <title><?php $sql = "SELECT * FROM settings"; $result = mysqli_query($conn, $sql); if ($result->num_rows > 0) { while($row = $result->fetch_assoc()) {  echo $row['title']; }}?> | <?php if(isset($title)){ echo $title; }?></title>
 <link href="<?php echo DIR;?>/assets/css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
-<link href="<?php echo DIR;?>/assets/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="<?php echo DIR;?>/assets/css/style.css" rel="stylesheet">
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>

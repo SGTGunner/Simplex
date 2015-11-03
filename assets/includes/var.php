@@ -6,6 +6,7 @@ $events = "";
 $donate = "";
 $serverip = "";
 $port = "";
+$brand = "";
 $usr = "";
 $id = "";
 $isadmin = "";
@@ -21,6 +22,7 @@ if (mysqli_num_rows($result) > 0) {
 		$gallery = $row['gallery'];
 		$serverip = $row['serverip'];
 		$port = $row['port'];
+		$brand = $row['brand'];
 		}
 	}
 $sql = "SELECT * FROM users WHERE username = '$s_user'";

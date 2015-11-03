@@ -9,6 +9,12 @@
 <script src="<?php echo DIR;?>/assets/js/ps.js"></script>
 <script src="<?php echo DIR;?>/assets/js/search.js"></script>
 <script src="<?php echo DIR;?>/assets/js/admin.js"></script>
+<script src="<?php echo DIR;?>/assets/js/metisMenu.js"></script>
+<script>
+  $(function () {
+    $('#menu').metisMenu();
+  });
+</script>
 <script src="http://rexsdev.us/assets/js/tooltip.js"></script>
 
     <script type="text/javascript">

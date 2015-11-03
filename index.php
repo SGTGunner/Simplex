@@ -30,7 +30,7 @@ echo'
 					if(($Players = $Query->GetPlayers()) !== false) {
 						foreach($Players as $Player) {
 								$img = htmlspecialchars($Player);
-								echo "<a href='/users/user.php?=$img' data-toggle='tooltip' data-placement='top' title='$img'><img src='http://cravatar.eu/avatar/$img/32.png'/'></a>";
+								echo "<a href='/users/user.php?=$img' data-toggle='tooltip' data-placement='top' title='$img'><img src='http://cravatar.eu/avatar/$img/32.png'/'></a>&nbsp;";
 						}
 					} else {
 						echo "";

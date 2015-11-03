@@ -6,7 +6,7 @@ session_start();
 define('TITLE', 'PayPal Donation Widget');
 
 // PayPal account, you can use your paypal e-mail or merchant ID
-define('PAYPAL_ID', 'paypal@yourURL.com');
+define('PAYPAL_ID', 'Email@Email.com');
 
 // How many recent/top donors should be displayed in donation box
 define('DONORS_NUMBER', 5);
@@ -18,12 +18,12 @@ define('CURRENCY', 'USD');
 define('TARGET', 1000);
 
 // Information
-define('DIR','http://yourURL.com'); //Set your domain
-define('SITEEMAIL','No-reply@yourURL.com');  //Set your administation email 
+define('DIR','http://yourdoamin.com'); //Set your domain
+define('SITEEMAIL','no-reply.email.com');  //Set your administation email 
 
 //Google ReCaptcha 2.0
-$siteKey = 'KEY';
-$secret = 'SKEY'; //Visit http://google.com/recaptcha
+$siteKey = 'KEY	';
+$secret = 'KEY'; //Visit http://google.com/recaptcha
 
 //Default time zone
 date_default_timezone_set('Toronto/America'); // Set your default time zone. http://php.net/manual/en/timezones.php
@@ -32,4 +32,4 @@ date_default_timezone_set('Toronto/America'); // Set your default time zone. htt
 $server = 'localhost'; //State your MySQL server Host (Usually localhost)
 $user = 'simplex';  // State your MySQL server username
 $pass = 'simplex'; // State your MySQL user password
-$db = 'simplex'; // State your MySQL database name
+$db = 'simplex_v3'; // State your MySQL database name

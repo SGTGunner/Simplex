@@ -28,6 +28,9 @@ session_start();
               ],
               toolbar: "insertfile undo redo | styleselect | sizeselect | bold italic | fontselect |  fontsizeselect | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image" 
           });
-  </script>
+	</script>
 </head>
 <body>
+<?
+"\r\n";		
+?>

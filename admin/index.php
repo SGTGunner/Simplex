@@ -8,8 +8,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/assets/includes/var.php');
 				include ('header.php');
 				include ('navbar.php');
 ?>
-<div class="container">
-	<div class="row">
+   <div class="container-fluid">
+    <div class="side-body">
 		<div class="col-md-6 col-md-offset-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -51,7 +51,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/assets/includes/var.php');
 	include ('header.php');
 	include ('navbar.php');
 ?>
-<div class="container-fluid">
+<div class="container">
 	<div class="col-md-2">
 		<form action="#" method="get">
 			<div class="input-group">
@@ -81,11 +81,6 @@ echo '<div class="table-responsive">
 						}echo'
 						<th>Postion</th>
 						<th>Status</th>
-						<th>User Avatar</th>
-						<th>Bio</th>
-						<th>Gender</th>
-						<th>Birthday</th>
-						<th>Website</th>
 						<th>Location</th>
 						<th>Occupation</th>
 						<th>Admin</th>
@@ -107,11 +102,6 @@ echo '<div class="table-responsive">
 				<td>' . $row['unit'] . '</td>
 				<td>' . $row['position'] . '</td>
 				<td>' . $row['status'] . '</td>
-				<td><img class="img-responsive" src="' . $row['user_avt'] . '"></td>
-				<td>' . $row['bio'] . '</td>
-				<td>' . $row['gender'] . '</td>
-				<td>' . $row['birthday'] . '</td>
-				<td>' . $row['website'] . '</td>
 				<td>' . $row['location'] . '</td>
 				<td>' . $row['occupation'] . '</td>
 				<td>' . $row['admin'] . '</td>
@@ -198,13 +188,14 @@ echo'<div class="container">
 					$result = mysqli_query($conn, $sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {
+							$timeresult = date(" l, d, F, Y", strtotime($row['date']));
 							echo'		
 								<tr>
 									<td>' . $row['id'] . '</td>
 									<td>' . $row['title'] . '</td>
 									<td>' . $row['body'] . '</td>
 									<td><a href="'.DIR.'/users/user.php?=' . $row['puser'] . '">' . $row['puser'] . '</a></td>
-									<td>' . $row['date'] . '</td>
+									<td>' . $timeresult . '</td>
 									<td><a class="btn btn-warning" href="records/news.php?id=' . $row['id'] . '"><i class="fa fa-pencil fa-fw"></i></a></td>
 									<td><a class="btn btn-danger" href="delete/news.php?id=' . $row['id'] . '"><i class="fa fa-times fa-fw"></i></a></td>
 								</tr>';
@@ -287,12 +278,16 @@ echo'<div class="container">
 			$result = mysqli_query($conn, $sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
+					$dateraw = $row['year'].$row['month'].$row['date'];
+					$timeraw = $row['time'];
+					$date = date(" D d, F Y", strtotime($dateraw));
+					$time = date("g:iA", strtotime($timeraw));
 				echo'
 				<tr>
 					<td>' . $row['id'] . '</td>
 					<td>' . $row['event_title'] . '</td>
-					<td>' . $row['date'] . '</td>
-					<td>' . $row['time'] . '</td>
+					<td>' . $date . '</td>
+					<td>' . $time . '</td>
 					<td>' . $row['month'] . '</td>
 					<td>' . $row['year'] . '</td>
 					<td>' . $row['location'] . '</td>

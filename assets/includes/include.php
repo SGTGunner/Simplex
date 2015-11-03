@@ -8,6 +8,6 @@ if (!$conn) {
 include($_SERVER['DOCUMENT_ROOT'].'/assets/classes/user.php');
 $user = new User($conn);
 
-$ver = "3.0.8";
+$ver = "3.0.6";
 
 $log_use = $_SESSION['username'];
