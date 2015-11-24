@@ -45,3 +45,4 @@
 <br>
 <li>Aireesan &middot; Minor contributor</li>
 <br>
+Minecraft Query by  <a href="https://github.com/xPaw/PHP-Minecraft-Query/">XPaw.ru</a>
